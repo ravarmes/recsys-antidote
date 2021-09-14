@@ -42,15 +42,17 @@ X_est = article.compute_X_est(X, algorithm) # RecSysALS or RecSysKNN or RecSysNM
 
 print("\n\n------------ SOCIAL OBJECTIVE FUNCTIONS ------------")
 
+# To capture polarization, we seek to measure the extent to which the user ratings disagree
 polarization = Polarization()
 Rpol = polarization.evaluate(X_est)
 print("Polarization (Rpol):", Rpol)
 
-
+# Individual fairness. For each user i, the loss of user i, is  the mean squared estimation error over known ratings of user i
 ilv = IndividualLossVariance(X, omega, 1) #axis = 1 (0 rows e 1 columns)
 Rindv = ilv.evaluate(X_est)
 print("Individual Loss Variance (Rindv):", Rindv)
 
+# Group fairness. Let I be the set of all users/items and G = {G1 . . . ,Gg} be a partition of users/items into g groups
 # G group: identifying the groups (NA: users grouped by number of ratings for available items)
 # advantaged group: 5% users with the highest number of item ratings
 # disadvantaged group: 95% users with the lowest number of item ratings
