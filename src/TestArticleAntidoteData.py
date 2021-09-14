@@ -40,19 +40,21 @@ X_est = article.compute_X_est(X, algorithm) # RecSysALS or RecSysKNN or RecSysNM
 #print("Omega")
 #print(omega)
 
+print("\n\n------------ SOCIAL OBJECTIVE FUNCTIONS ------------")
+
 polarization = Polarization()
-polarization_result = polarization.evaluate(X_est)
-print("Polarization:", polarization_result)
+Rpol = polarization.evaluate(X_est)
+print("Polarization (Rpol):", Rpol)
 
 
 ilv = IndividualLossVariance(X, omega, 1) #axis = 1 (0 rows e 1 columns)
-ilv_result = ilv.evaluate(X_est)
-print("Individual Loss Variance:", ilv_result)
+Rindv = ilv.evaluate(X_est)
+print("Individual Loss Variance (Rindv):", Rindv)
 
 # G group: identifying the groups (NA: users grouped by number of ratings for available items)
 # advantaged group: 5% users with the highest number of item ratings
 # disadvantaged group: 95% users with the lowest number of item ratings
 G = {1: [1,2], 2: [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]}
 glv = GroupLossVariance(X, omega, G, 1) #axis = 1 (0 rows e 1 columns)
-glv_result = glv.evaluate(X_est)
-print("Group Loss Variance:", glv_result)
+RgrpNA = glv.evaluate(X_est)
+print("Group Loss Variance (Rgrp NA):", RgrpNA)
