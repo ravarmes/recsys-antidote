@@ -5,7 +5,7 @@ import pandas as pd
 import RecSysALS
 import RecSysKNN
 import RecSysNMF
-from RecSysExampleAntidoteData20Items import RecSysExampleAntidoteData20Items
+from RecSysExampleData20Items import RecSysExampleData20Items
 
 class ArticleAntidoteData():
         
@@ -62,7 +62,7 @@ class ArticleAntidoteData():
 
     ###################################################################################################################
     # compute_X_est: 
-    def  compute_X_est(self, X, algorithm='RecSysALS'):
+    def  compute_X_est(self, X, algorithm='RecSysALS', data_dir="Data/Movie20Items"):
         if(algorithm == 'RecSysALS'):
             
             # factorization parameters
@@ -79,7 +79,9 @@ class ArticleAntidoteData():
         elif(algorithm == 'RecSysNMF'):
             RecSysNMF
         elif(algorithm == 'RecSysExampleAntidoteData20Items'):
-            X_est, movie_genres, user_info = RecSysExampleAntidoteData20Items.read_movieitems(40, 20, False, False, "Data/Movie20Items")
+            RS = RecSysExampleData20Items()
+            X_est, movie_genres, user_info = RecSysExampleData20Items.read_movieitems(40, 20, False, False, data_dir)
+            #X_est, movie_genres, user_info = RS.read_movieitems(40, 20, False, False, "recsys-antidote/data/Movie20Items")
         else:
             RecSysNMF
         return X_est  
