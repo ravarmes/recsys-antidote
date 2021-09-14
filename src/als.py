@@ -1,5 +1,6 @@
 import numpy as np
 
+# alternating least squares (ALS) is a matrix factoring method used as a collaborative filtering algorithm in recommender systems
 def als(X,k,lambda_,max_iter,threshold):
     
     """
