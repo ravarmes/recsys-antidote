@@ -34,7 +34,7 @@
 
 O objetivo deste repositório é implementar os cálculos de medidas de justiça do usuário propostas no artigo 'Fighting Fire with Fire: Using Antidote Data to Improve Polarization and Fairness of Recommender Systems' (WSDM 19)
 
-Este repositório está baseada nas implementações do respositório [antidote-data-framework](https://github.com/rastegarpanah/antidote-data-framework) 
+Este repositório está baseado nas implementações do respositório [antidote-data-framework](https://github.com/rastegarpanah/antidote-data-framework) 
 
 ### Funções de Objetivo Social (Social Objective Functions)
 
@@ -55,7 +55,8 @@ Este repositório está baseada nas implementações do respositório [antidote-
 
 ## :link: Links <a name="-links"/></a>
 
-- [Google Colaboratory](https://colab.research.google.com/drive/1aZIuljttlAaTq-LxtcXgjuBNnDCakuzE) - Notebook para demonstrar a utilização do algoritmo para uma base de dados pequena (40 usuário e 20 filmes);
+- [Google Colaboratory](https://colab.research.google.com/drive/1aZIuljttlAaTq-LxtcXgjuBNnDCakuzE) - Notebook para demonstrar a utilização do algoritmo para uma base de dados pequena (40 usuários e 20 filmes);
+- [Google Sheets](https://docs.google.com/spreadsheets/d/10s-5AnfRHGmxO2DCbOIkqL11OUBMMyOC) - Planilha para demonstrar a utilização do algoritmo para uma base de dados pequena (40 usuários e 20 filmes);
 - [Artigo](https://arxiv.org/pdf/1812.01504.pdf) - Fighting Fire with Fire: Using Antidote Data to Improve Polarization and Fairness of Recommender Systems;
 
 
