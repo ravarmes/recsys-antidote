@@ -56,7 +56,7 @@ Este repositório está baseado nas implementações do respositório [antidote-
 ## :link: Links <a name="-links"/></a>
 
 - [Google Colaboratory](https://colab.research.google.com/drive/1aZIuljttlAaTq-LxtcXgjuBNnDCakuzE) - Notebook para demonstrar a utilização do algoritmo para uma base de dados pequena (40 usuários e 20 filmes);
-- [Google Sheets](https://docs.google.com/spreadsheets/d/10s-5AnfRHGmxO2DCbOIkqL11OUBMMyOC) - Planilha para demonstrar a utilização do algoritmo para uma base de dados pequena (40 usuários e 20 filmes);
+- [Google Sheets](https://github.com/ravarmes/recsys-antidote/blob/main/docs/antidote-data-example.xlsx) - Planilha para demonstrar a utilização do algoritmo para uma base de dados pequena (40 usuários e 20 filmes);
 - [Artigo](https://arxiv.org/pdf/1812.01504.pdf) - Fighting Fire with Fire: Using Antidote Data to Improve Polarization and Fairness of Recommender Systems;
 
 
