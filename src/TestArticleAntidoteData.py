@@ -16,10 +16,11 @@ top_movies = False # True: to use movies with more ratings; False: otherwise
 #n_users=  300
 #n_movies= 1000
 #top_users = True # True: to use users with more ratings; False: otherwise
+#top_movies = False # True: to use movies with more ratings; False: otherwise
 
 # recommendation algorithm
 #algorithm = 'RecSysALS'
-algorithm = 'RecSysExampleAntidoteData20Items'
+algorithm = 'RecSysExampleAntidoteData20Items' # this algorithm should only be used for a database with 40 users and 20 movies 'Data/Movie20Items'
 
 # parameters for calculating fairness measures
 l = 5
@@ -33,10 +34,10 @@ omega = ~X.isnull() # matrix X with True in cells with evaluations and False in 
 
 X_est = article.compute_X_est(X, algorithm) # RecSysALS or RecSysKNN or RecSysNMF or RecSysExampleAntidoteData20Items
 
-#print("X_est")
-#print(X_est)
 #print("X")
 #print(X)
+#print("X_est")
+#print(X_est)
 #print("Omega")
 #print(omega)
 
