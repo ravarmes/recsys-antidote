@@ -39,9 +39,9 @@ Este repositório está baseado nas implementações do respositório [antidote-
 ### Funções de Objetivo Social (Social Objective Functions)
 
 ```
-* Polarization
-* Individual fairness
-* Group fairness
+* Polarization (Polarização): mensura até que ponto as avaliações do usuário discordam
+* Individual fairness (Justiça Individual): a perda do usuário i é a estimativa do erro quadrático médio sobre as classificações conhecidas do usuário i
+* Group fairness (Justiça do Grupo): a perda do grupo i é a estimativa do erro quadrático médio sobre as classificações conhecidas no grupo i
 ```
 
 ### Arquivos

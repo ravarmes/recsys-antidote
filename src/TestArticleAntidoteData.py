@@ -53,7 +53,8 @@ ilv = IndividualLossVariance(X, omega, 1) #axis = 1 (0 rows e 1 columns)
 Rindv = ilv.evaluate(X_est)
 print("Individual Loss Variance (Rindv):", Rindv)
 
-# Group fairness. Let I be the set of all users/items and G = {G1 . . . ,Gg} be a partition of users/items into g groups
+# Group fairness. Let I be the set of all users/items and G = {G1 . . . ,Gg} be a partition of users/items into g groups. 
+# The loss of group i as the mean squared estimation error over all known ratings in group i
 # G group: identifying the groups (NA: users grouped by number of ratings for available items)
 # advantaged group: 5% users with the highest number of item ratings
 # disadvantaged group: 95% users with the lowest number of item ratings
