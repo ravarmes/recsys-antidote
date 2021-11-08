@@ -25,9 +25,9 @@ class ArticleAntidoteData():
         # create a dataframe with movie IDs on the rows and user IDs on the columns
         ratings = df.pivot(index='MovieID', columns='UserID', values='Rating')
         
-        movies = pd.read_table('{}/movies.dat'.format(data_dir), names=['MovieID', 'Title', 'Genres'], sep='::', engine='python')
+        movies = pd.read_table('{}/movies.dat'.format(data_dir), names=['MovieID', 'Title', 'Genres'], sep='::', engine='python', encoding = "ISO-8859-1")
                             
-        user_info = pd.read_table('{}/users.dat'.format(data_dir), names=['UserID','Gender','Age','Occupation','Zip-code'], sep='::', engine='python')
+        user_info = pd.read_table('{}/users.dat'.format(data_dir), names=['UserID','Gender','Age','Occupation','Zip-code'], sep='::', engine='python', encoding = "ISO-8859-1")
         user_info = user_info.rename(index=user_info['UserID'])[['Gender','Age','Occupation','Zip-code']]
         
         # put movie titles as index on rows
